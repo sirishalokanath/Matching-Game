@@ -49,7 +49,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 3em;
+    margin: 10px 0 4em;
 }
 
 .deck .card {
@@ -82,8 +82,7 @@ h1 {
     font-size: 33px;
 }
 
-.deck .card.mismatch
-{
+.deck .card.mismatch {
     background: red;
 }
 
@@ -92,64 +91,119 @@ h1 {
  */
 
 .score-panel {
-    text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
+    width: 660px;
+    padding: 0px 20px;
 }
 
 .score-panel .stars {
     margin: 0;
     padding: 0;
     display: inline-block;
-    margin: 0 5px 0 0;
+    width: 65px;
 }
 
 .score-panel .stars li {
     list-style: none;
-    display: inline-block;
+    display: inline;
 }
 
-.score-panel .restart {
+.score-panel .restart-game {
     float: right;
     cursor: pointer;
 }
 
-/*Style for modal*/
-.win
-{
-    background:url(https://ak9.picdn.net/shutterstock/videos/7207639/thumb/1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width:60%;
-    height:70%;
-    position:relative;
-    left:20%;
-    top:-710px;
+.score-content {
+    margin: 0px;
+    display: inline;
 }
 
-.move
-{
+#game-time {
+    width: 100px;
+    display: inline-block;
+}
+
+/*Style for modal*/
+
+.modal {
+    display: none;
+    background: white;
+    position: fixed;
+    top: 0px;
+    /* width: 60%; */
+    left: 0px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+}
+
+.move {
     margin-right: 100px;    
 }
 
-#time
-{
-    float:left;
-    margin-left: -100px;
-}
-
-.disable
-{
+.disable {
     pointer-events: none;
 }
 
 /*Style for button*/
 
-button
-{
+button {
     background-color: black;
     color:azure;
     font-size:20px;
     width:200px;
     height:40px;
+}
+
+/* CSS */
+.play-again {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.play-again:disabled {
+  cursor: default;
+}
+
+.play-again:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
